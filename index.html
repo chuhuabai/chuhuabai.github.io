@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BDO color counter</title>
+</head>
+
+<body>
+    <div style="orientation:portrait;">
+        <div style="text-align:center;">
+            <button type="button" style="width:100%;height:20vh;position:relative;background-color: red;"
+                onclick="onClick('red-count')">
+                <span id="red-count" style="font-size:100px;">0</span>
+            </button><br>
+            <button type="button" style="width:100%;height:20vh;position:relative;background-color:blue;"
+                onclick="onClick('blue-count')">
+                <span id="blue-count" style="font-size:100px;">0</span>
+            </button><br>
+            <button type="button" style="width:100%;height:20vh;position:relative;background-color: yellow;"
+                onclick="onClick('yellow-count')">
+                <span id="yellow-count" style="font-size:100px;">0</span>
+            </button><br>
+            <button type="button" style="width:100%;height:20vh;position:relative;background-color: white;"
+                onclick="onClick('white-count')">
+                <span id="white-count" style="font-size:100px;">0</span>
+            </button><br>
+            <button type="button" style="width:50%;height:10vh;background-color: gray;" onclick="onClickReset()">
+                <span id="reset-button" style="font-size:80px;">Reset</span>
+            </button>
+        </div>
+        <div style="text-align:right;">
+            <span style="text-align:right;">Made by 白初華</span>
+        </div>
+    </div>
+</body>
+<script>
+    var pre_count = 0;
+
+    function onClick(color) {
+        pre_count = +document.getElementById(color).innerHTML;
+        document.getElementById(color).innerHTML = pre_count + 1;
+    };
+
+    function onClickReset() {
+        document.getElementById('red-count').innerHTML = 0;
+        document.getElementById('blue-count').innerHTML = 0;
+        document.getElementById('yellow-count').innerHTML = 0;
+        document.getElementById('white-count').innerHTML = 0;
+    };
+</script>
+
+</html>
